@@ -11,18 +11,21 @@
 
 (() => {
     // your code here
-    var userDate = new Date(document.getElementById("year").value)
-
-    var userYear = userDate.getFullYear();
-    var userMonth = userDate.getMonth();
-    var userDay = userDate.getDate();
-    var userDayOfTheWeek = userDate.getDay();
-    var userHour = userDate.getHours();
-    var userMinute = userDate.getMinutes();
-
-    var frenchDay = ['dimanche', 'lundi', 'mardi', 'mercredi', 'jeudi', 'vendredi', 'samedi'];
+    var userYear = document.getElementById("year").value;
+    var checkDay = 13; // jour du mois
+    var checkDayOfTheWeek = 5; // vendredi
+    var checkDate = new Date();
+    var resultat = "";
     var frenchMonth = ['janvier', 'février', 'mars', 'avril', 'mai', 'juin', 'juillet', 'août', 'septembre', 'octobre', 'novembre', 'décembre'];
+    
+    for (var i = 0; i < 12; i++){
+        checkDate = new Date(userYear,i,checkDay);
+        if (checkDate.getDay()==5);{
+            resultat += frenchMonth[i]+" ";
+        }
+    }
 
-    document.getElementById("target").innerHTML = frenchDay[currentDayOfTheWeek]+" "+currentDay+" "+frenchMonth[currentMonth]+" "+currentYear+", "+currentHour+"h"+currentMinute;
+
+    document.getElementById("demo").innerHTML = resultat;
 
 })();

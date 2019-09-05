@@ -10,5 +10,13 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+  document.getElementById("run").addEventListener("click", () => {
+      // change la couleur de fond du document hmtl en valeur hex générée de manière aléatoire
+      // SOURCE
+      // https://www.paulirish.com/2009/random-hex-color-code-snippets/
+      var randBgColor = '#'+Math.floor(Math.random()*16777215).toString(16);
+      let myElement = document.querySelector("html");
+      myElement.style.background = randBgColor;
+      document.getElementById("demo").innerHTML = randBgColor;
+  });
 })();

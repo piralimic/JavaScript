@@ -11,4 +11,24 @@
 
 (() => {
     // your code here
+    document.getElementById("red").addEventListener("click", () => {
+        // change la couleur de fond du document hmtl en ROUGE
+        let myElement = document.querySelector("html");
+        myElement.style.background = "#F00";
+    });
+    document.getElementById("green").addEventListener("click", () => {
+        // change la couleur de fond du document hmtl en ROUGE
+        let myElement = document.querySelector("html");
+        myElement.style.background = "#0F0";
+    });
+    document.getElementById("yellow").addEventListener("click", () => {
+        // change la couleur de fond du document hmtl en ROUGE
+        let myElement = document.querySelector("html");
+        myElement.style.background = "#FC3";
+    });
+    document.getElementById("blue").addEventListener("click", () => {
+        // change la couleur de fond du document hmtl en ROUGE
+        let myElement = document.querySelector("html");
+        myElement.style.background = "#16232E";
+    });
 })();

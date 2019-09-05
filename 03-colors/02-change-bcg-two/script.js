@@ -10,5 +10,9 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+  document.getElementById("run").addEventListener("click", () => {
+      // change la couleur de fond du document hmtl en ROUGE
+      let myElement = document.querySelector("html");
+      myElement.style.background = document.getElementById('color').value;
+  });
 })();

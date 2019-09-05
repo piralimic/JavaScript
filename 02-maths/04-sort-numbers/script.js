@@ -14,5 +14,22 @@
 
     document.getElementById("run").addEventListener("click", () => {
         // your code here
+        var numbersList = document.getElementById("numbers").value;
+        // split the string into an array
+        // elements are separated with ", " as filter
+        var numberArray = numbersList.split(", ");
+        // sort elements by order and comparaison
+        numberArray.sort(function(a, b){return a-b});
+
+        var result = "";
+        for (var i = 0; i < numberArray.length; i++) {
+          if (i < numberArray.length - 1) {
+              result += numberArray[i]+", ";
+          } else {
+          result += numberArray[i];
+        }
+        }
+        // affiche le résultat dans la zone de saisie HTML
+        document.getElementById("numbers").value = result;
     });
 })();

@@ -28,7 +28,7 @@
             alert(parseInt(document.getElementById("op-one").value)/parseInt(document.getElementById("op-two").value));
             break;
           default:
-
+            console.log('Aucune opération valide.')
         }
     };
 

@@ -12,5 +12,17 @@
 (()=> {
 
     // your code here
-
+    var result = "Résultat :<br>";
+    for (var i = 1; i <= 100; i++) {
+      if (i%3==0){
+        if (i%5==0) {
+          result += i+" : fizzbuzz<br>";
+        } else
+          result += i+" : fizz<br>";
+        } else if (i%5==0){
+          result += i+" : buzz<br>";
+        } else
+          result += i+"<br>";
+        }
+    document.getElementById("demo").innerHTML = result;
 })();

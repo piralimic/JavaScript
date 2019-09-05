@@ -10,22 +10,23 @@
 // You will have time to focus on it later.
 
 (() => {
+  document.getElementById("run").addEventListener("click", () => {
     // your code here
     var userYear = document.getElementById("year").value;
     var checkDay = 13; // jour du mois
     var checkDayOfTheWeek = 5; // vendredi
-    var checkDate = new Date();
     var resultat = "";
     var frenchMonth = ['janvier', 'février', 'mars', 'avril', 'mai', 'juin', 'juillet', 'août', 'septembre', 'octobre', 'novembre', 'décembre'];
     
     for (var i = 0; i < 12; i++){
-        checkDate = new Date(userYear,i,checkDay);
-        if (checkDate.getDay()==5);{
-            resultat += frenchMonth[i]+" ";
+        var checkDate = new Date(userYear,i,checkDay);
+        if (checkDate.getDay() == checkDayOfTheWeek){
+            resultat += frenchMonth[i]+"<br>";
         }
     }
 
 
     document.getElementById("demo").innerHTML = resultat;
 
+  });
 })();

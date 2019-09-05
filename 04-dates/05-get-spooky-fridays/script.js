@@ -11,4 +11,18 @@
 
 (() => {
     // your code here
+    var userDate = new Date(document.getElementById("year").value)
+
+    var userYear = userDate.getFullYear();
+    var userMonth = userDate.getMonth();
+    var userDay = userDate.getDate();
+    var userDayOfTheWeek = userDate.getDay();
+    var userHour = userDate.getHours();
+    var userMinute = userDate.getMinutes();
+
+    var frenchDay = ['dimanche', 'lundi', 'mardi', 'mercredi', 'jeudi', 'vendredi', 'samedi'];
+    var frenchMonth = ['janvier', 'février', 'mars', 'avril', 'mai', 'juin', 'juillet', 'août', 'septembre', 'octobre', 'novembre', 'décembre'];
+
+    document.getElementById("target").innerHTML = frenchDay[currentDayOfTheWeek]+" "+currentDay+" "+frenchMonth[currentMonth]+" "+currentYear+", "+currentHour+"h"+currentMinute;
+
 })();

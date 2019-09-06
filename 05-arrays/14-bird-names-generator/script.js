@@ -101,7 +101,7 @@
       resultat = oiseau + birds[randomBirds].name +" "+ adjectif;
     }
 
-    document.getElementById("demo").innerHTML = resultat;
+    document.getElementById("target").innerHTML = resultat;
 
   });
 })();

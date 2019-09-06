@@ -31,7 +31,7 @@
       for (let item of people) {
         if (item == "Alexandre") {
           resultat = "Alexandre est dans la liste !"
-        } 
+        }
         total++;
       }
 

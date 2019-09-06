@@ -89,4 +89,21 @@
     ];
 
     // your code here
+    document.getElementById("run").addEventListener("click", () => {
+
+      const peopleMajor = [];
+      let resultat = "Liste des personnes > 18 ans :<ul>";
+
+      for (let i = 0; i < people.length; i++) {
+        if (people[i].age > 18){
+            peopleMajor.push(people[i]);
+        }
+      }
+
+      for (var i = 0; i < peopleMajor.length; i++) {
+        resultat += "<li>"+peopleMajor[i].firstname+" "+peopleMajor[i].lastname+" ("+peopleMajor[i].age+")</li>";
+      }
+
+      document.getElementById("demo").innerHTML = resultat;
+    });
 })();

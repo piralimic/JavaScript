@@ -89,4 +89,18 @@
     ];
 
     // your code here
+    document.getElementById("run").addEventListener("click", () => {
+
+      var listing = "Email de Jean Dupont : <ul>"
+
+      for (var i = 0; i < people.length; i++) {
+        if (people[i].lastname == 'Dupont'){
+          if(people[i].firstname == 'Jean'){
+            listing += "<li>Index : "+i+"</li><li>Email : "+people[i].email+"</li>";
+          }
+        }
+      }
+
+      document.getElementById("demo").innerHTML = listing+"</ul>";
+    });
 })();

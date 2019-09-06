@@ -25,5 +25,15 @@
         "cerise",
     ];
 
-    // your code here
+    document.getElementById("run").addEventListener("click", () => {
+
+      let found = fruits.find(function(element) {
+        return element == 'pomme';
+      });
+        if (found) {
+          document.getElementById("demo").innerHTML = "Oui, il y a une pomme.";
+        } else {
+          document.getElementById("demo").innerHTML = "Non, il n'y a pas de pomme.";
+        }
+    });
 })();

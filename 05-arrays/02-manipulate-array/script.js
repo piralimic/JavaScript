@@ -24,4 +24,11 @@
     ];
 
     // your code here
+    document.getElementById("run").addEventListener("click", () => {
+      fruits.shift(); // retire le premier élément du tableau
+      fruits.unshift('banane'); // ajoute banane au début du tableau
+      fruits.push('kiwi'); //ajout kiwi à la fin du tableau
+
+      document.getElementById("demo").innerHTML = fruits;
+    });
 })();

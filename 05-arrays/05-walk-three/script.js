@@ -39,4 +39,13 @@
     ];
 
     // your code here
+    document.getElementById("run").addEventListener("click", () => {
+
+      var listing = "Noms des clients : <ul>"
+
+      people.forEach(function(element) {
+        listing += "<li>"+element.lastname+"</li>";
+      });
+      document.getElementById("demo").innerHTML = listing+"</ul>";
+    });
 })();

@@ -26,4 +26,13 @@
     ];
 
     // your code here
+    document.getElementById("run").addEventListener("click", () => {
+
+      var listing = "Liste de fruits : <ul>"
+
+      fruits.forEach(function(element) {
+        listing += "<li>"+element+"</li>";
+      });
+      document.getElementById("demo").innerHTML = listing+"</ul>";
+    });
 })();

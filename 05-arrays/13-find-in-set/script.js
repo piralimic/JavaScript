@@ -23,4 +23,19 @@
     ]);
 
     // your code here
+    document.getElementById("run").addEventListener("click", () => {
+
+      let resultat;
+      let total=0;
+
+      for (let item of people) {
+        if (item == "Alexandre") {
+          resultat = "Alexandre est dans la liste !"
+        } 
+        total++;
+      }
+
+    document.getElementById("demo").innerHTML = resultat+"<br>Il y a "+total+" personne(s) inscrite(s)";
+
+  });
 })();

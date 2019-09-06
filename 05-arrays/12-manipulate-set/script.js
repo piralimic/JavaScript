@@ -24,4 +24,20 @@
     ]);
 
     // your code here
+    document.getElementById("run").addEventListener("click", () => {
+
+      fruits.delete('pomme');
+      fruits.delete('cerise');
+      fruits.add('banane');
+      fruits.add('kiwi');
+
+      let resultat = "Nouveau Set de fruits :<ul>";
+
+      for (let item of fruits) {
+        resultat += "<li>"+item+"</li>";
+      }
+
+    document.getElementById("demo").innerHTML = resultat+"</ul>";
+
+  });
 })();

@@ -28,4 +28,14 @@
     ];
 
     // your code here
+    document.getElementById("run").addEventListener("click", () => {
+      const fruitsUniques = [];
+      for (let i = 0; i < fruits.length; i++) {
+        if (fruits.indexOf(fruits[i]) == i){
+          fruitsUniques.push(fruits[i]);
+        }
+      }
+    document.getElementById("demo").innerHTML = "Liste de fruits uniques : "+fruitsUniques;
+
+  });
 })();

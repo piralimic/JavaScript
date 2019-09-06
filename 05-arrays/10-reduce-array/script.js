@@ -89,4 +89,14 @@
     ];
 
     // your code here
-})();
+    // utilisation de .reduce
+    // https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Array/reduce#Additionner_les_valeurs_d'une_propri%C3%A9t%C3%A9s_pour_un_tableau_d'objets
+    document.getElementById("run").addEventListener("click", () => {
+    let valeurInitiale = 0;
+    let somme = people.reduce(
+        (accumulateur, valeurCourante) => accumulateur + valeurCourante.age
+        , valeurInitiale
+    );
+    document.getElementById("demo").innerHTML = "Somme des âges : "+somme;
+  });
+  })();

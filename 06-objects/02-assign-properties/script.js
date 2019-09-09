@@ -27,4 +27,36 @@
         user: null,
     };
     // your code here
+    document.getElementById("run").addEventListener("click", () => {
+
+    console.log(computers[2].available);
+    let resultat = "Liste des ordinateurs :"
+    let dispo;
+    let user;
+
+    for (var i = 0; i < computers.length; i++) {
+      if(typeof computers[i].available === "undefined"){
+        computers[i].available = defaultProps.available;
+      }
+      if(!computers[i].user){
+        computers[i].user = defaultProps.user;
+      }
+      if(!computers[i].os){
+        computers[i].os = defaultProps.os;
+      }
+      if(!computers[i].available){
+        dispo = "Occupé";
+      } else {
+        dispo = "Disponible";
+      }
+      if(computers[i].user === null){
+        user = "N/A";
+      } else {
+        user = computers[i].user;
+      }
+      resultat += "<ul><li>id : "+computers[i].id+"</li><li>"+dispo+"</li><li>OS : "+computers[i].os+"</li><li>Utilisateur : "+user+"</li></ul>"
+    }
+
+    document.getElementById("demo").innerHTML = resultat;
+  });
 })();

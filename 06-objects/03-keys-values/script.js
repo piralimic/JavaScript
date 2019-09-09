@@ -19,4 +19,20 @@
         status: "married",
     };
     // your code here
+    document.getElementById("run").addEventListener("click", () => {
+
+      // retourne les clés d'un objet sous forme de tableau
+      let objectKeys = Object.keys(person);
+      console.log(objectKeys);
+      // retourne les valeurs d'un objet sous forme de tableau
+      let objectValues = Object.values(person);
+      console.log(objectValues);
+      // retourne la paire clés/valeurs d'un objet sous forme de tableau (pas forcément dans le même ordre)
+      let resultat = " Objet (person) :<ul>";
+      for (let [key, value] of Object.entries(person)) {
+        resultat += `<li>${key}: ${value}</li>`;
+      }
+
+    document.getElementById("demo").innerHTML = resultat+"</ul>";
+  });
 })();

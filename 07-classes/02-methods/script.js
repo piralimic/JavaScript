@@ -11,4 +11,21 @@
 
 (() => {
     // your code here
+    document.getElementById("run").addEventListener("click", () => {
+
+      class Person {
+          constructor(firstname, lastname) {
+              this.firstname = firstname;
+              this.lastname = lastname;
+          }
+
+          sayHello(){
+              return `Hello, ${this.firstname} ${this.lastname} !`
+          }
+      }
+
+      const minion = new Person("Michaël", "Pirali");
+
+    document.getElementById("demo").innerHTML = minion.sayHello();
+  });
 })();

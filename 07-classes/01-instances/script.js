@@ -17,4 +17,16 @@
         }
     }
     // your code here
+    document.getElementById("run").addEventListener("click", () => {
+
+      const cat1 = new Cat("Skitty", 9);
+      const cat2 = new Cat("Pixel", 6);
+
+      let resultat = "Liste des chats :";
+
+      resultat += "<ul><li>Nom : "+cat1.name+"</li><li>Age : "+cat1.age+" ans</ul>";
+      resultat += "<ul><li>Nom : "+cat2.name+"</li><li>Age : "+cat2.age+" ans</ul>";
+
+    document.getElementById("demo").innerHTML = resultat;
+  });
 })();

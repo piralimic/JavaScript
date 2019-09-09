@@ -10,5 +10,33 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+  // your code here
+  let resultat = "Nom complet : ";
+
+  class Person {
+    constructor(firstname, lastname) {
+      this.firstname = firstname;
+      this.lastname = lastname;
+    }
+    get name() {
+      return `${this.firstname} ${this.lastname}`;
+    }
+    set name(nomComplet) {
+      let splitName = nomComplet.split(" ");
+      this.firstname = splitName[0];
+      this.lastname = splitName[1];
+    }
+  }
+  document.getElementById("run").addEventListener("click", () => {
+    // nouvelle objet Person
+    let premPersonne = new Person("Monsieur", "Poulpe");
+    // appel du getter name
+    resultat += "<ul><li>name : "+premPersonne.name+"</li></ul>";
+    // appel du setter name
+    premPersonne.name = "Madame Pieuvre";
+
+    resultat += "<br><br>Nouvelles valeurs :<ul><li>firstname : " + premPersonne.firstname + "</li><li>lastname : " + premPersonne.lastname+"</li>";
+
+    document.getElementById("demo").innerHTML = resultat;
+  });
 })();

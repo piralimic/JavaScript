@@ -11,4 +11,9 @@
 
 (() => {
     // your code here
+    document.getElementsByClassName("target")[0].innerHTML = "owned";
+
+    for (let i = 0; i < document.getElementsByClassName("target").length; i++) {
+      document.getElementsByClassName("target")[i].innerHTML = "owned";
+    }
 })();

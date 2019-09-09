@@ -10,5 +10,15 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+  // your code here
+  let origine = document.getElementsByTagName("img")[0].getAttribute("src");
+  let source = document.getElementsByTagName("img")[0].getAttribute("data-hover");
+
+  document.getElementsByTagName("img")[0].addEventListener("mouseover", () => {
+    document.getElementsByTagName("img")[0].setAttribute("src", source);
+  });
+  document.getElementsByTagName("img")[0].addEventListener("mouseout", () => {
+    document.getElementsByTagName("img")[0].setAttribute("src", origine);
+  });
+
 })();

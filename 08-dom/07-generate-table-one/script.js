@@ -11,4 +11,10 @@
 
 (() => {
     // your code here
+    let maTable = "<table>"
+    for (var i = 0; i < 10; i++) {
+      maTable += "<tr><td>ligne "+(i+1)+"</td></tr>"
+    }
+    maTable += "</table>"
+    document.getElementById('target').innerHTML = maTable;
 })();

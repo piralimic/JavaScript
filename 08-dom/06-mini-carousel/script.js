@@ -19,4 +19,12 @@
     ];
 
     // your code here
+    let i = 0;
+    document.getElementById("next").addEventListener("click", () => {
+      i++
+      if (i == gallery.length) {
+        i = 0;
+      }
+      document.getElementsByTagName("img")[0].setAttribute("src", gallery[i]);
+  });
 })();

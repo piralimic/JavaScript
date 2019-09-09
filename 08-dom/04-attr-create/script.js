@@ -11,4 +11,10 @@
 
 (() => {
     // your code here
+    let imageId = document.getElementById('source');
+    let sourceImg = imageId.getAttribute("data-image");
+    // suppression de la source
+    document.getElementById("source").remove();
+    // affichage de la balise image
+    document.getElementById('target').innerHTML = "<img src='"+sourceImg+"'>";
 })();

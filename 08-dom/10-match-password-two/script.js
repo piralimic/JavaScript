@@ -11,4 +11,29 @@
 
 (() => {
     // your code here
+    document.getElementById('run').addEventListener("click", () => {
+
+        document.getElementById('pass-one').removeAttribute("class");
+        document.getElementById('pass-two').removeAttribute("class");
+
+
+        if (document.getElementById('pass-one').value === "" || document.getElementById('pass-two').value === "") {
+          document.getElementById('demo').innerHTML = "Veuillez d'abord compléter les deux champs avant de valider.";
+          if (document.getElementById('pass-one').value === "") {
+            document.getElementById('pass-one').setAttribute("class", "error");
+          }
+          if (document.getElementById('pass-two').value === "") {
+            document.getElementById('pass-two').setAttribute("class", "error");
+          }
+        } else {
+          if (document.getElementById('pass-one').value === document.getElementById('pass-two').value) {
+            document.getElementById('demo').innerHTML = "";
+          } else {
+            document.getElementById('demo').innerHTML = "Mots de passe différents";
+            document.getElementById('pass-one').setAttribute("class", "error");
+            document.getElementById('pass-two').setAttribute("class", "error");
+
+          }
+        }
+    });
 })();

@@ -10,5 +10,18 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+  // your code here
+  let maxInputLength = 10;
+  let currentInputLength = document.getElementById('pass-one').value.length;
+
+  document.getElementById('pass-one').maxLength = maxInputLength;
+
+
+  document.getElementById('pass-one').addEventListener('input', () => {
+
+      currentInputLength = document.getElementById('pass-one').value.length;
+      document.getElementById('counter').innerHTML = currentInputLength+"/"+maxInputLength;
+
+
+  });
 })();

@@ -11,4 +11,28 @@
 
 (() => {
     // your code here
+    let minInputLength = 8;
+    let currentInputLength = document.getElementById('pass-one').value.length;
+    let regexCheckValue = /[0-9]/g;
+    let inputCurrentValue;
+    let regexArray = [0];
+
+
+    document.getElementById('pass-one').addEventListener('input', () => {
+
+        inputCurrentValue = document.getElementById('pass-one').value;
+
+        if (inputCurrentValue.match(regexCheckValue)) {
+          regexArray = inputCurrentValue.match(regexCheckValue);
+        }
+        currentInputLength = document.getElementById('pass-one').value.length;
+
+        if (currentInputLength >= minInputLength && regexArray.length >= 2) {
+          document.getElementById('validity').innerHTML = "Ok";
+        } else {
+          document.getElementById('validity').innerHTML = "Pas ok";
+        }
+
+
+    });
 })();

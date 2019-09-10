@@ -11,4 +11,7 @@
 
 (() => {
     // your code here
+    document.getElementById('slider').addEventListener('input', () => {
+      document.getElementById('target').innerHTML = "+"+document.getElementById('slider').value;
+    });
 })();

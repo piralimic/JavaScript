@@ -11,4 +11,16 @@
 
 (() => {
     // your code here
-})();
+    let i = document.getElementById('target').innerHTML;
+
+    document.getElementById("increment").addEventListener("click", () => {
+      i++;
+      localStorage.setItem("counter", i);
+      document.getElementById("target").innerHTML = localStorage.getItem("counter");
+    });
+
+    // Store in localStorage
+    localStorage.setItem("counter", i);
+    // Retrieve from localStorage
+    document.getElementById("target").innerHTML = localStorage.getItem("counter");
+  })();

@@ -11,16 +11,21 @@
 
 (() => {
     // your code here
-    let i = document.getElementById('target').innerHTML;
+
+    // Retrieve from localStorage
+    let i = localStorage.getItem("counter");
+
+    if (typeof i === "undefined") {
+      i = 0;
+    } else {
+      document.getElementById("target").innerHTML = localStorage.getItem("counter");
+    }
+
 
     document.getElementById("increment").addEventListener("click", () => {
       i++;
+      // Store in localStorage
       localStorage.setItem("counter", i);
       document.getElementById("target").innerHTML = localStorage.getItem("counter");
     });
-
-    // Store in localStorage
-    localStorage.setItem("counter", i);
-    // Retrieve from localStorage
-    document.getElementById("target").innerHTML = localStorage.getItem("counter");
   })();

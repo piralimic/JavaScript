@@ -28,6 +28,18 @@
             <div class="content">
                 <section class="explain">
                     <p>Au chargement de la page, le script choisi un nombre entre 1 et 100, puis demande à l'utilisateur de soumettre un chiffre. Le script répond "plus grand" ou "plus petit" en fonction, ou le félicite si le nombre est correct, tout en affichant son nombre d'essais.</p>
+                    <p id="demo"></p>
+                </section>
+                <section class="material">
+                    <p id="target">1</p>
+                    <form action="#" method="post">
+                        <div class="field full">
+                            <input type="range" min="1" max="100" value="1" id="slider" name="slider" />
+                        </div>
+                    </form>
+                    <div class="actions">
+                        <button type="button" id="check">Vérifier</button>
+                    </div>
                 </section>
             </div>
         </div>
@@ -35,4 +47,3 @@
         <script src="./script.js"></script>
     </body>
 </html>
-

@@ -1,0 +1,68 @@
+<!--
+ * becode/javascript
+ *
+ * /06-objects/01-generate-object/index.html - 6.1: générer un object
+ *
+ * coded by leny@BeCode
+ * started at 08/05/2019
+-->
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <title>BeCode/JavaScript - 99.1: Hangman</title>
+
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" />
+        <link rel="stylesheet" href="../../_shared/css/normalize.css" />
+        <link rel="stylesheet" href="../../_shared/css/styles.css" />
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <h1>BeCode / JavaScript</h1>
+                <h2>
+                    <span>99.1</span>
+                    <strong>Hangman</strong>
+                </h2>
+            </header>
+            <div class="content">
+                <section class="explain">
+                  <p>Création d'un jeu simple.</p>
+
+                  <p>Utiliser la console ou les fonctions natives suivantes pour intéragir avec l'utilisateur :</p>
+                  <ul>
+                    <li>window.prompt();</li>
+                    <li>window.alert();</li>
+                    <li>window.confirm();</li>
+
+
+
+                      <li>Créer un tableau pour contenir les lettres du mot : 'D','E','V','I','N','E','R',</li>
+
+                      <li>Créer un autre tableau pour mettre les lettres devinées : '_','_','_','_','_','_','_'.</li>
+
+                      <li>Écrire une fonction appelée "guessLetter" cette fonction va :</li>
+                        <ul>
+                          <li>Itérer à travers les lettres</li>
+                          <li>Voir si la lettre devinée se trouve dans le mot</li>
+                          <li>Si oui, changer le tableau des lettres devinées pour ajouter la nouvelle lettre</li>
+                          <li>Afficher dans la console les lettre devinées</li>
+                          <li>Le jeu doit savoir quand la partie est finie et féliciter le joueur</li>
+                          </ul>
+
+
+                      <li>Le nombre d'essais est illimité</li>
+                      </ul><br>
+                    <p>Emplacement des lettres dans le mot : <span id="demo"></span></p><br><br>
+                </section>
+                <section class="material">
+                    <div class="actions">
+                        <button type="button" id="run">Lancer le script</button>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <script src="./script.js"></script>
+    </body>
+</html>

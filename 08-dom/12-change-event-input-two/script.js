@@ -14,6 +14,8 @@
     let minInputLength = 8;
     let currentInputLength = document.getElementById('pass-one').value.length;
     let regexCheckValue = /[0-9]/g;
+    // pour avoir 2 chiffres avec d'autres caractères
+    // /[0-9].*[0-9]/
     let inputCurrentValue;
     let regexArray = [0];
 

@@ -12,7 +12,7 @@
 (() => {
     // your code here
     let nbreEssais = 0;
-    let randomCent = Math.floor(Math.random() * 100);
+    let randomCent = Math.floor(Math.random() * 100) + 1);
     document.getElementById('demo').innerHTML = "Nombre d'essais : "+nbreEssais;
 
     document.getElementById('slider').addEventListener('input', () => {

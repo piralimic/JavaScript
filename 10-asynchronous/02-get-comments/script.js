@@ -11,11 +11,11 @@
 
 (() => {
   // your code here
-  function callbackFunction(error, tableArticles){
+  function callbackFunction(error, tableArticles) {
     if (error === null) {
-      tableArticles.forEach(function(article){
+      tableArticles.forEach(function(article) {
         console.log(article.id);
-        window.lib.getComments(article.id,function(error, tabComment){
+        window.lib.getComments(article.id, function(error, tabComment) {
           console.log(tabComment);
           article.comments = tabComment;
         })
@@ -26,8 +26,14 @@
     }
   }
 
-  document.getElementById('run').addEventListener("click", () => {
-    window.lib.getPosts(callbackFunction);
-  });
+  /*
+  https://www.w3schools.com/js/js_htmldom_eventlistener.asp
+
+  Passing Parameters > JavaScript HTML DOM EventListener
+
+  https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener#Event_listener_with_anonymous_function
+  */
+
+  document.getElementById('run').addEventListener("click", function() {window.lib.getPosts(callbackFunction); });
 
 })();

@@ -11,4 +11,15 @@
 
 (() => {
     // your code here
+    function callbackFunction(error, tabPersonnes) {
+      if (error === null) {
+        console.table(tabPersonnes);
+      } else {
+        console.log("ERROR: big badaboum");
+      }
+    }
+
+    document.getElementById('run').addEventListener("click", () => {
+      window.lib.getPersons(callbackFunction);
+    });
 })();

@@ -11,4 +11,16 @@
 
 (() => {
     // your code here
+    function callbackFunction(error, tableArticles){
+      if (error === null) {
+        return console.table(tableArticles);
+      } else {
+        return console.log("ERROR : This is Sparta !");
+      }
+    }
+
+    document.getElementById('run').addEventListener("click", () => {
+      window.lib.getPosts(callbackFunction);
+    });
+
 })();

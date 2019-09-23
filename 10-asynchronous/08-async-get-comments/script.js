@@ -10,5 +10,20 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+  // your code here
+  async function afficherLesArticles() {
+    let tableauArticles = await window.lib.getPosts();
+    // console.table(tableauArticles);
+      for (const article of tableauArticles){
+        let tableauCommentaires = await window.lib.getComments(article.id);
+        article.comments = tableauCommentaires;
+      }
+      console.log(tableauArticles);
+    }
+
+  document.getElementById('run').addEventListener("click", () => {
+    afficherLesArticles();
+
+
+  });
 })();

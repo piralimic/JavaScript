@@ -11,4 +11,16 @@
 
 (() => {
     // your code here
-})();
+    async function afficherListePersonnes() {
+      try {
+        let tableauPersonnes = await window.lib.getPersons();
+        console.table(tableauPersonnes);
+      } catch (error) {
+        console.error(error.message);
+      }
+    }
+
+    document.getElementById('run').addEventListener("click", () => {
+      afficherListePersonnes();
+    });
+  })();

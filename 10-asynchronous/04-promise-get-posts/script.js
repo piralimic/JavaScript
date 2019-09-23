@@ -10,5 +10,27 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+  // your code here
+  // https://developer.mozilla.org/fr/docs/Web/JavaScript/Guide/Utiliser_les_promesses
+  document.getElementById('run').addEventListener("click", () => {
+
+    /*
+    //avec une fonction fléchée
+    window.lib.getPosts().then(
+    tableauArticles => { // resolve()
+      console.table(tableauArticles);
+      return window.lib.getPosts();
+    }
+  )
+    */
+
+
+    //avec une simple fonction anonyme
+    window.lib.getPosts().then(function(tableauArticles) { // resolve()
+      console.table(tableauArticles);
+    }
+  )
+
+
+});
 })();

@@ -13,8 +13,11 @@
   // your code here
   function callbackFunction(error, tableArticles) {
     if (error === null) {
+      // la méthode forEach appelle une fonction avec au moins 1 ou 2 paramètre(s) pour chaque élément du tableau
+      // le premier paramètre = valeur de l'élément contenu dans le tableau
+      // le second paramètre = index de l'élément contenu dans le tableau
       tableArticles.forEach(function(article) {
-        console.log(article.id);
+        // console.log(article.id);
         window.lib.getComments(article.id, function(error, tabComment) {
           console.log(tabComment);
           article.comments = tabComment;
@@ -34,6 +37,8 @@
   https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener#Event_listener_with_anonymous_function
   */
 
-  document.getElementById('run').addEventListener("click", function() {window.lib.getPosts(callbackFunction); });
+  document.getElementById('run').addEventListener("click", function() {
+    window.lib.getPosts(callbackFunction);
+  });
 
 })();

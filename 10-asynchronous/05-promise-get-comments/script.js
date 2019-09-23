@@ -11,4 +11,24 @@
 
 (() => {
     // your code here
-})();
+    // https://javascript.developpez.com/actu/146280/Comprendre-les-Promises-en-JavaScript-TypeScript-article-de-yahiko/
+
+    document.getElementById('run').addEventListener("click", () => {
+      window.lib.getPosts().then(
+      tableauArticles => { // resolve()
+        tableauArticles.forEach(function(article){
+          // console.log(article.id);
+          window.lib.getComments(article.id).then(
+            tableauCommentaires => { // resolve()
+              //console.table(tableauCommentaires);
+              article.comments = tableauCommentaires;
+              return window.lib.getComments();
+            }
+          )
+        })
+        console.log(tableauArticles);
+        return window.lib.getPosts();
+      }
+    )
+    });
+  })();

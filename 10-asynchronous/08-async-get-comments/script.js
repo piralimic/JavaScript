@@ -11,8 +11,9 @@
 
 (() => {
   // your code here
+  /*
   async function afficherLesArticles() {
-    let tableauArticles = await window.lib.getPosts();
+    const tableauArticles = await window.lib.getPosts();
     // console.table(tableauArticles);
       for (const article of tableauArticles){
         let tableauCommentaires = await window.lib.getComments(article.id);
@@ -20,10 +21,14 @@
       }
       console.log(tableauArticles);
     }
-
-  document.getElementById('run').addEventListener("click", () => {
-    afficherLesArticles();
+  */
 
 
+  document.getElementById('run').addEventListener("click", async () => {
+    const tableauArticles = await window.lib.getPosts();
+    for (const article of tableauArticles){
+      article.comments = await window.lib.getComments(article.id);
+    }
+    console.log(tableauArticles);
   });
 })();

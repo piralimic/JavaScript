@@ -12,13 +12,14 @@
 (() => {
   // your code here
   // https://www.codingame.com/playgrounds/482/javascript-async-and-await-keywords/a-first-example
+  /*
   async function afficherLesArticles() {
     let tableauArticles = await window.lib.getPosts();
     console.table(tableauArticles);
   }
-
-  document.getElementById('run').addEventListener("click", () => {
-    afficherLesArticles();
-
+  */
+  
+  document.getElementById('run').addEventListener("click", async () => {
+    console.table(await window.lib.getPosts());
   });
 })();

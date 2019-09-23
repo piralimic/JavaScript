@@ -11,6 +11,7 @@
 
 (() => {
     // your code here
+    /*
     async function afficherListePersonnes() {
       try {
         let tableauPersonnes = await window.lib.getPersons();
@@ -19,8 +20,14 @@
         console.error(error.message);
       }
     }
+    */
 
-    document.getElementById('run').addEventListener("click", () => {
-      afficherListePersonnes();
+
+    document.getElementById('run').addEventListener("click", async () => {
+      try {
+        console.table(await window.lib.getPersons());
+      } catch (error) {
+        console.error(error.message);
+      }
     });
   })();

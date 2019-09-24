@@ -13,7 +13,28 @@
   // your code here
   document.getElementById('run').addEventListener("click", async () => {
     const response = await fetch('http://localhost:3000/heroes')
-    const myJson = await response.json();
-    console.log(JSON.stringify(myJson));
+    const listHeroesJson = await response.json();
+    //console.log(JSON.stringify(listHeroesJson));
+    // Get the TEMPLATE element:
+    const template = document.getElementById("tpl-hero");
+    // Get the LI element from the template:
+    const item = template.content.querySelector("li");
+    for (let hero of listHeroesJson){
+      item.querySelector("strong").innerText = hero.name;
+      item.querySelector("em").innerText = hero.alterEgo;
+      // afficher les sorts dans une liste
+      const listAbilities = hero.abilities;
+      let p = "<ul>";
+      for (let ability of listAbilities){
+        p += "<li>"+ability+"</li>";
+      }
+      item.querySelector("p").innerHTML = p+"</ul>";
+      //item.querySelector("p").innerText = hero.abilities;
+      // Clone Node and add the new one into the TARGET
+      const clonage = template.content.cloneNode(true);
+      document.getElementById("target").appendChild(clonage);
+    }
+
+
   });
 })();

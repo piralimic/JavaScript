@@ -48,23 +48,6 @@
       ]
     },
     {
-      "name": "Batman",
-      "alterEgo": "Bruce Wayne",
-      "abilities": [
-        "Expert in interrogation techniques",
-        "Different fighting styles"
-      ],
-      "id": 9
-    },
-    {
-      "name": "Testeur",
-      "alterEgo": "El Professor",
-      "abilities": [
-        "Random 100"
-      ],
-      "id": 11
-    },
-    {
       "name": "Batgirl",
       "alterEgo": "Benedicte Weck",
       "abilities": [
@@ -75,18 +58,20 @@
     },
     {
       "id": 13,
-      "name": "gfff",
-      "alterEgo": "ddd",
+      "name": "Doggy Dog",
+      "alterEgo": "Dogukan",
       "abilities": [
-        "ddd"
+        "Keep calm",
+        " Mitraillette sauce Samouraï"
       ]
     },
     {
       "id": 14,
-      "name": "gfff",
-      "alterEgo": "ddd",
+      "name": "Poséidon",
+      "alterEgo": "Karl Amma",
       "abilities": [
-        "ddd"
+        "Coquillage et crustacé",
+        " Collier de perles"
       ]
     }
   ]

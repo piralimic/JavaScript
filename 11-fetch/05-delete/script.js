@@ -11,25 +11,48 @@
 
 (() => {
   // your code here
+
+document.body.onload = listeHeros;
+
+async function listeHeros () {
+  document.getElementById("target").innerHTML = "";
+
+  const getResponse = await fetch('http://localhost:3000/heroes');
+  const listHeroesJson = await getResponse.json();
+
+  const template = document.getElementById("tpl-hero");
+  const item = template.content.querySelector("select");
+
+  for (let hero of listHeroesJson){
+    const newOption = document.createElement("option");
+    newOption.value = hero.id;
+    newOption.innerText = hero.name;
+    item.appendChild(newOption);
+  }
+  const clonage = template.content.cloneNode(true);
+  document.getElementById("target").appendChild(clonage);
+
+  // RESET TEMPLATE
+  while(item.firstChild){
+    item.removeChild(item.firstChild);
+  }
+}
+
+
   document.getElementById('run').addEventListener("click", async () => {
     try {
-      const response = await fetch('http://localhost:3000/heroes/' + document.getElementById("hero-id").value, {
-        method: 'DELETE',
-        headers: {
-          'Content-Type': 'application/json;charset=utf-8'
-        }
+      const delResponse = await fetch('http://localhost:3000/heroes/' + document.getElementById("hero-id").value, {
+        method: 'DELETE'
       });
-
-      if (response.ok) {
+      if (delResponse.ok) {
         console.log("L'élément a été supprimé");
-      } else if (response.status == 404) {
+        listeHeros();
+      } else if (delResponse.status == 404) {
         console.log("L'élément n'existe pas");
       }
 
     } catch (e) {
       console.error(e.message);
-    } finally {
-
     }
 
   });

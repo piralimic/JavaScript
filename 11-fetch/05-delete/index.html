@@ -25,15 +25,17 @@
                     <strong>supprimer un élément</strong>
                 </h2>
             </header>
+            <template id="tpl-hero">
+            <select name="hero-id" id="hero-id">
+            </select>
+            </template>
             <div class="content">
                 <section class="explain">
                     <p>Au clic sur le bouton, récupère l'id dans le formulaire, puis supprime le X-Men correspondant dans l'API et affiche le résultat de ta requête dans la console.</p>
                 </section>
                 <section class="material">
                     <form action="#" method="post">
-                        <div class="field">
-                            <label for="hero-id">Id du héro:</label>
-                            <input type="text" name="hero-id" id="hero-id" />
+                        <div id="target" class="field">
                         </div>
                         <div class="actions">
                             <button type="button" id="run">Lancer le script</button>
@@ -46,4 +48,3 @@
         <script src="./script.js"></script>
     </body>
 </html>
-

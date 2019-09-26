@@ -12,7 +12,7 @@
 (() => {
   // your code here
   document.getElementById('run').addEventListener("click", async () => {
-    const response = await fetch('http://localhost:3000/heroes')
+    const response = await fetch('http://localhost:3000/heroes');
     const listHeroesJson = await response.json();
     //console.log(JSON.stringify(listHeroesJson));
     // Get the TEMPLATE element:

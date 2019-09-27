@@ -14,6 +14,9 @@
   function callbackFunction(error, tableArticles) {
     if (error === null) {
       // la méthode forEach appelle une fonction avec au moins 1 ou 2 paramètre(s) pour chaque élément du tableau
+
+      // IL FAUT AJOUTER UN compteur POUR VERIFIER LE BON CONTROLE
+
       // le premier paramètre = valeur de l'élément contenu dans le tableau
       // le second paramètre = index de l'élément contenu dans le tableau
       tableArticles.forEach(function(article) {

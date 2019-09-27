@@ -23,6 +23,7 @@
     }
   */
 
+  // PROMISE.ALL
 
   document.getElementById('run').addEventListener("click", async () => {
     const tableauArticles = await window.lib.getPosts();

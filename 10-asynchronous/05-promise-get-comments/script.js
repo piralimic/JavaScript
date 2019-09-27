@@ -13,6 +13,8 @@
     // your code here
     // https://javascript.developpez.com/actu/146280/Comprendre-les-Promises-en-JavaScript-TypeScript-article-de-yahiko/
 
+    // AU LIEU D'UTILISER UN compteur COMME DANS EXERCICE 02 il faut utiliser PROMISE.all
+
     document.getElementById('run').addEventListener("click", () => {
       window.lib.getPosts().then(
       tableauArticles => { // resolve()
